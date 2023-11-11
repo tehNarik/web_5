@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab5</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <header>
+        <h1>Логотип</h1>
+        <h2>Cторінка 2</h2>
+    </header>
+    <div id="center">
+        <aside id="left_aside" onmouseout="alignRight()">
+            <span>
+                <ol>
+                    <li>Сторінка 1</li>
+                    <li>Сторінка 2</li>
+                    <li>Сторінка 3</li>
+                    <li>Сторінка 4</li>
+                    <li>Сторінка 5</li>
+                </ol>
+                <ol id="dynamicList">
+                    <!-- Існуючі елементи списку -->
+                    <li>Existing Item 0</li>
+                </ol>
+            </span>
+        </aside><!--
+        --><div id="center_middle"><nav id="nav"><ul>
+                <li>Меню</li>
+                <li>Відгуки</li>
+                <li>Контакти</li>
+            </ul>
+        </nav>
+        <div id="main" onmouseout="alignRight()"><span>
+            <form id="numberForm">
+                <label for="numberInput">Введіть натуральне число:</label>
+                <input type="number" id="numberInput" required>
+                <button type="button" onclick="findMaxDigit()">Знайти максимальну цифру</button>
+              </form>
+              Вирівняти по правому краю:
+              <form id="numberForm">
+                <!-- інші елементи форми -->
+            
+                <label>
+                    <input type="radio" name="alignment" value="left" checked> Лівий aside
+                </label>
+                <label>
+                    <input type="radio" name="alignment" value="center"> Центр
+                </label>
+                <label>
+                    <input type="radio" name="alignment" value="right"> Правий aside
+                </label>
+            </form>
+            <select id="dynamicSelect">
+                <option value="Item 1">Item 1</option>
+                <option value="Item 2">Item 2</option>
+                <option value="Item 3">Item 3</option>
+                <option value="Item 4">Item 4</option>
+                <option value="Item 5">Item 5</option>
+                <option value="Item 6">Item 6</option>
+                <option value="Item 7">Item 7</option>
+                <!-- Додайте інші варіанти за необхідністю -->
+              </select>
+              <button onclick="addItemToList()">Додати до списку</button>
+            </span>
+        </div></div><div id="right"><aside id="right_aside" onmouseout="alignRight()">
+            <span>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius provident sint nam, ex impedit eos vitae? Iste officia iusto magni, ipsam vitae aliquid repellat voluptatem nostrum cum quas quaerat labore.
+        </span>
+        </aside><div id="right_down"><p>Тут може бути ваша реклама</p></div></div></div>
+        <footer>
+            <h3>Сторінку востаннє редаговано 21.10.23</h3>
+            <h4>Лабораторна 5</h4>
+        </footer>
+        <script src="script.js">
+            
+        </script> 
+    </body>
+</html>
+
