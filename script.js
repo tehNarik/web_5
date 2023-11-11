@@ -17,6 +17,7 @@ function getSquare(){
 
 
 // Function to find the maximum digit in a given number
+// Function to find the maximum digit in a given number
 function findMaxDigit() {
     // Get the input value from the form
     var numberInput = document.getElementById("numberInput").value;
@@ -56,9 +57,6 @@ function displayStoredInfo() {
     }
 }
 
-
-
-
 // Function to get the value of a specific cookie
 function getCookie(cookieName) {
     var name = cookieName + "=";
@@ -80,6 +78,22 @@ function getCookie(cookieName) {
 // Call the function to display stored information on page reload
 displayStoredInfo();
 
+// Add a listener for the beforeunload event
+window.addEventListener('beforeunload', function (e) {
+    // Check if the "maxDigit" cookie is set
+    var maxDigitCookie = getCookie("maxDigit");
+
+    if (maxDigitCookie) {
+        // Display the stored information using a dialog box
+        var userChoice = confirm("Максимальна цифра, збережена в cookies: " + maxDigitCookie +
+                                 "\nНатисніть 'ОК', щоб видалити ці дані, або 'Скасувати', щоб залишити.");
+
+        if (userChoice) {
+            // Delete the "maxDigit" cookie
+            document.cookie = "maxDigit=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        }
+    }
+});
 
 
 
